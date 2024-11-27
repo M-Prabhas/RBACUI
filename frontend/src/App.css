@@ -1,0 +1,180 @@
+.App {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.Users {
+    height: 100vh;
+    width: 30vw;
+    margin: 0;
+    padding: 0;
+    background-color: gold;
+    overflow-y: hidden;
+    position: relative;
+}
+
+.Users h1 {
+    color: azure;
+    position: absolute;
+    top: 10px;
+    left: 12vw;
+    text-decoration: underline white;
+}
+
+.Users .list {
+    display: block;
+    height: 80vh;
+    width: 23vw;
+    position: absolute;
+    left: 2.4vw;
+    top: 100px;
+    background-color: azure;
+    border: 3px black solid;
+    border-radius: 10px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.adUser {
+    height: 100vh;
+    overflow-y: hidden;
+    width: 70vw;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.adUser .box {
+    height: 5rem;
+    width: 5rem;
+    border: 3px black solid;
+    border-radius: 10px;
+    position: relative;
+    top: 19vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.adUser .box .plus {
+    font-size: 3rem;
+    font-weight: bold;
+    position: absolute;
+    top: 1rem;
+    cursor: pointer;
+}
+
+.adUser .createUser {
+    height: auto;
+    width: 11rem;
+    padding: 10px;
+    border: 3px black solid;
+    border-radius: 10px;
+    position: absolute;
+    bottom: -10rem;
+    z-index: 1;
+    background-color: aliceblue;
+    visibility: hidden;
+    margin: 0;
+}
+
+.adUser .createUser.create {
+    visibility: visible;
+}
+
+.adUser .createUser .close {
+    font-size: 2rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    display: inline;
+}
+
+.adUser .createUser .delete {
+    display: inline;
+    font-size: 2rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    visibility: hidden;
+}
+
+.adUser .createUser .delete.deleted {
+    visibility: visible;
+}
+
+.adUser .createUser .part {
+    display: flex;
+    margin-bottom: 0.7rem;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.adUser .createUser .part .switch {
+    height: 1rem;
+    width: 2rem;
+    margin-bottom: 0.7rem;
+    margin-right: 0.4rem;
+    border: rgb(137, 134, 134) 3px solid;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.adUser .createUser .part .switchswitched .circle {
+    background-color: black;
+    height: 0.6rem;
+    width: 0.8rem;
+    margin: 0px;
+    border: white 2px solid;
+    border-radius: 99px;
+    z-index: 4;
+    transform: translateX(0);
+    transition: left 0.15s ease;
+    position: absolute;
+    left: 0.2rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.list::-webkit-scrollbar {
+    width: 15px;
+}
+
+.list::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: #f1f1f1;
+}
+
+.list::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #888;
+}
+
+.list::-webkit-scrollbar-thumb:hover {
+    background: rgb(226, 29, 29);
+}
+
+@media screen and (max-width: 500px) {
+    .Users {
+        width: 40vw;
+    }
+    .Users h1 {
+        left: 7.6vw;
+    }
+    .Users .list {
+        width: 30vw;
+        left: 3.4vw;
+    }
+
+    .adUser {
+        width: 60vw;
+    }
+
+    .adUser .createUser {
+        bottom: -10rem;
+    }
+}
